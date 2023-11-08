@@ -8,11 +8,9 @@ import imd.ufrn.br.modelo.Pessoa;
 public class PessoaDAO {
 	
 	private ArrayList<Pessoa> pessoas;
-	private GeradorImpostoRenda gerador;
 	
 	public PessoaDAO() {
 		this.pessoas = new ArrayList<>();
-		this.gerador = new GeradorImpostoRenda();
 	}
 
     public void cadastrarPessoa(Pessoa pessoa) {
@@ -28,9 +26,10 @@ public class PessoaDAO {
     	System.out.println("-------------- LISTA DE PESSOAS --------------");
     	
     	for(Pessoa pessoa : pessoas) {
-    		System.out.println("Nome: "+ pessoa.getNome() + "Salário: ");
+    		System.out.println("Nome: "+ pessoa.getNome());
+    		System.out.print("Salário: ");
     		System.out.printf("%.2f", pessoa.getSalario());
-    		System.out.println(pessoa.getConta());
+    		System.out.println("\n" + pessoa.getConta());
     		System.out.println(pessoa.getSeguro());
     		System.out.println("---------------------------------------------");
     	}
@@ -38,6 +37,8 @@ public class PessoaDAO {
     }
     
     public void calcularTributosPessoas() {
+    	GeradorImpostoRenda gerador = new GeradorImpostoRenda();
+    	
     	System.out.println("-------------- TRIBUTOS DAS PESSOAS --------------");
     	
     	for(Pessoa pessoa : pessoas) {
@@ -49,6 +50,8 @@ public class PessoaDAO {
     
 	
 	public void imprimeImpostoTotal() {
+		
+		GeradorImpostoRenda gerador = new GeradorImpostoRenda();
 		
 		double totalImposto = 0;
 		double maiorImposto = 0;
@@ -76,10 +79,10 @@ public class PessoaDAO {
 		
 		System.out.println("-------------- IMPRIME IMPOSTO TOTAL --------------");
 		System.out.println("Total de imposto a ser recolhido: " + totalImposto);
-		System.out.println("Pessoa que pagará o maior imposto: " + pessoaImposto.getNome()
-							+ "Imposto a ser pago: "+ maiorImposto);
-		System.out.println("Beneficiado com maior valor de seguro: " + pessoaBeneficiado.getNome()
-							+ "Valor do seguro: "+ maiorValorSeguro);
+		System.out.println("Pessoa que pagará o maior imposto: " + pessoaImposto.getNome());
+		System.out.println("Imposto a ser pago: "+ maiorImposto);
+		System.out.println("Beneficiado com maior valor de seguro: " + pessoaBeneficiado.getNome());
+		System.out.println("Valor do seguro: "+  maiorValorSeguro);
 		System.out.println("---------------------------------------------------");
 		
 	}

@@ -52,11 +52,7 @@ public class SeguroVida implements ITributavel {
 	
 	@Override
     public String toString() {
-        return "SeguroVida [" +
-                "numero =" + numero +
-                ", beneficiado ='" + beneficiado + 
-                ", valor =" + valor +
-                ", taxa =" + taxa + ']';
+        return "[Seguro] " + "numero = " + numero + ", beneficiado = " + beneficiado +  ", valor = " + valor + ", taxa = " + taxa;
     }
 
 }

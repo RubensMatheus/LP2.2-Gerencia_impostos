@@ -36,18 +36,16 @@ public class ContaCorrente implements ITributavel{
 	
 	public void sacar(double valor) {
         if(valor <= saldo) {
-        	System.out.println("[Ag: " + agencia + "] [Conta: " + numero + "] Saque de " 
-        				        + valor + " realizado!");
+        	System.out.println("Saque realizado na conta: " + this + " de " +  valor);
             saldo -= valor;
         } else {
-        	System.out.println("Não foi possível realizar o saque! Valor inválido");
+        	System.out.println("Não foi possível realizar o saque em " + this + ". Valor: " + valor);
         }
     }
 
     public void depositar(double valor) {
         saldo += valor;
-        System.out.println("[Ag: " + agencia + "] [Conta: " + numero + "] Depósito de " 
-		        + valor + " realizado!");
+        System.out.println("Depósito realizado na conta: " + this + "de " +  valor);
     }
 
     public boolean transferir(double valor, ContaCorrente cc) {
@@ -55,8 +53,7 @@ public class ContaCorrente implements ITributavel{
             this.sacar(valor);
             cc.depositar(valor);
             
-            System.out.println("Transferência de [Conta: " + numero + "] para [Conta " + cc.getNumero() + 
-            		"] realizado! Valor: " + valor);
+            System.out.println("Transferência entre " + this + " e " + cc + " realizada no valor de " + valor);
             
             return true;
         }
@@ -72,10 +69,7 @@ public class ContaCorrente implements ITributavel{
     
     @Override
     public String toString() {
-        return "ContaCorrente [" +
-                "agencia ='" + agencia +
-                ", numero ='" + numero + 
-                ", saldo = " + saldo + ']';
+        return "[ContaCorrente] " +  "agencia = " + agencia + ", numero = " + numero + ", saldo = " + saldo;
     }
 
 
