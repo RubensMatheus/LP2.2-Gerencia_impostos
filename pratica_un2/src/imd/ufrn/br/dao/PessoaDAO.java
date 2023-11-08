@@ -43,8 +43,9 @@ public class PessoaDAO {
     	
     	for(Pessoa pessoa : pessoas) {
     		System.out.println("Nome: "+ pessoa.getNome());
-    		System.out.println("Tributos: "+ gerador.calculaValorTotalTributo(pessoa));
-    		System.out.println("--------------------------------------------------\n");
+    		System.out.print("Tributos: ");
+    		System.out.printf("%.2f", gerador.calculaValorTotalTributo(pessoa));
+    		System.out.println("\n--------------------------------------------------\n");
     	}
     }
     
