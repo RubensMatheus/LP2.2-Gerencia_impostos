@@ -23,7 +23,7 @@ public class PessoaDAO {
     
     public void listarPessoas() {
     	
-    	System.out.println("-------------- LISTA DE PESSOAS --------------");
+    	System.out.println("\n-------------- LISTA DE PESSOAS --------------");
     	
     	for(Pessoa pessoa : pessoas) {
     		System.out.println("Nome: "+ pessoa.getNome());
@@ -31,7 +31,7 @@ public class PessoaDAO {
     		System.out.printf("%.2f", pessoa.getSalario());
     		System.out.println("\n" + pessoa.getConta());
     		System.out.println(pessoa.getSeguro());
-    		System.out.println("---------------------------------------------");
+    		System.out.println("---------------------------------------------\n");
     	}
     	
     }
@@ -44,7 +44,7 @@ public class PessoaDAO {
     	for(Pessoa pessoa : pessoas) {
     		System.out.println("Nome: "+ pessoa.getNome());
     		System.out.println("Tributos: "+ gerador.calculaValorTotalTributo(pessoa));
-    		System.out.println("--------------------------------------------------");
+    		System.out.println("--------------------------------------------------\n");
     	}
     }
     
@@ -83,7 +83,7 @@ public class PessoaDAO {
 		System.out.println("Imposto a ser pago: "+ maiorImposto);
 		System.out.println("Beneficiado com maior valor de seguro: " + pessoaBeneficiado.getNome());
 		System.out.println("Valor do seguro: "+  maiorValorSeguro);
-		System.out.println("---------------------------------------------------");
+		System.out.println("---------------------------------------------------\n");
 		
 	}
 

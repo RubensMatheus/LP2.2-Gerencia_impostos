@@ -69,7 +69,7 @@ public class ContaCorrente implements ITributavel{
     
     @Override
     public String toString() {
-        return "[ContaCorrente] " +  "agencia = " + agencia + ", numero = " + numero + ", saldo = " + saldo;
+        return "[ContaCorrente] " +  "agencia = " + agencia + ", numero = " + numero;
     }
 
 
