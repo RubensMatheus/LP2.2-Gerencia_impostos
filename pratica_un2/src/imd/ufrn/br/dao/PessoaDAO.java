@@ -1,8 +1,9 @@
-package dao;
+package imd.ufrn.br.dao;
 
-import modelo.Pessoa;
-import controle.GeradorImpostoRenda;
 import java.util.ArrayList;
+
+import imd.ufrn.br.controle.GeradorImpostoRenda;
+import imd.ufrn.br.modelo.Pessoa;
 
 public class PessoaDAO {
 	

@@ -1,4 +1,4 @@
-package modelo;
+package imd.ufrn.br.modelo;
 
 public class SeguroVida implements ITributavel {
 	
@@ -11,7 +11,7 @@ public class SeguroVida implements ITributavel {
 		this.taxa = 31.50;
 	}
 	
-
+	
 	public int getNumero() {
 		return numero;
 	}

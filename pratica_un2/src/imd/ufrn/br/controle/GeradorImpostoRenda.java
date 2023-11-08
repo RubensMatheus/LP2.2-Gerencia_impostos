@@ -1,6 +1,6 @@
-package controle;
+package imd.ufrn.br.controle;
 
-import modelo.Pessoa;
+import imd.ufrn.br.modelo.Pessoa;
 
 public class GeradorImpostoRenda {
 	
